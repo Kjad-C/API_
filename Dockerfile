@@ -40,7 +40,7 @@ WORKDIR /ui
 
 COPY ui/litellm-dashboard/package.json ui/litellm-dashboard/package-lock.json ./
 COPY ui/litellm-dashboard/vendor/ ./vendor/
-RUN --mount=type=cache,id=s/13446a68-6f79-43ba-ade6-999deb8d3312-/root/.npm,target=/root/.npm npm ci --prefer-offline
+RUN --mount=type=cache,id=s/a74d3c3d-548d-4199-90ca-220fe5a99911-/root/.npm,target=/root/.npm npm ci
 
 COPY ui/litellm-dashboard/ ./
 RUN npm run build
